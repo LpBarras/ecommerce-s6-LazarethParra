@@ -1,0 +1,812 @@
+
+
+
+/* =========================================================
+   Gamestore, se utilizan colores esmeralda, negros y blancos
+   ========================================================= */
+
+:root {
+    --negro-principal: #080b0a;
+    --negro-secundario: #0d1210;
+    --negro-card: #111816;
+    --negro-card-hover: #16201c;
+
+    --esmeralda: #10b981;
+    --esmeralda-oscuro: #059669;
+    --esmeralda-profundo: #047857;
+    --esmeralda-brillante: #34d399;
+
+    --blanco: #ffffff;
+    --gris-texto: #d1d5db;
+    --gris-secundario: #9ca3af;
+    --borde: rgba(16, 185, 129, 0.25);
+}
+
+
+/* general */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--negro-principal);
+    color: var(--blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.text-esmeralda {
+    color: var(--esmeralda) !important;
+}
+
+
+/* navbar*/
+
+.navbar-gamestore {
+    background: rgba(8, 11, 10, 0.92);
+    border-bottom: 1px solid var(--borde);
+    backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: var(--negro-principal);
+    background: var(--esmeralda);
+
+    box-shadow:
+        0 0 18px rgba(16, 185, 129, 0.35);
+}
+
+.navbar-gamestore .nav-link {
+    color: var(--gris-texto);
+    transition: all 0.2s ease;
+}
+
+.navbar-gamestore .nav-link:hover,
+.navbar-gamestore .nav-link.active {
+    color: var(--esmeralda);
+}
+
+.btn-carrito {
+    color: var(--blanco);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid var(--esmeralda);
+    border-radius: 9px;
+
+    transition: all 0.2s ease;
+}
+
+.btn-carrito:hover {
+    color: var(--blanco);
+    background: var(--esmeralda);
+    box-shadow:
+        0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+.contador-carrito {
+    background: var(--esmeralda);
+    color: var(--negro-principal);
+    margin-left: 5px;
+}
+
+
+/* botones */
+
+.btn-esmeralda {
+    background: linear-gradient(
+        135deg,
+        var(--esmeralda),
+        var(--esmeralda-oscuro)
+    );
+
+    border: 1px solid var(--esmeralda);
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 5px 15px rgba(16, 185, 129, 0.15);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-esmeralda:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    background: linear-gradient(
+        135deg,
+        var(--esmeralda-brillante),
+        var(--esmeralda)
+    );
+
+    box-shadow:
+        0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.btn-outline-light {
+    border-radius: 9px;
+}
+
+
+/* hero */
+
+.hero-section {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 0;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(16, 185, 129, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(16, 185, 129, 0.06),
+            transparent 30%
+        ),
+        var(--negro-principal);
+}
+
+.badge-esmeralda {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--esmeralda-brillante);
+
+    border: 1px solid var(--borde);
+
+    padding: 8px 13px;
+    border-radius: 50px;
+}
+
+.hero-title {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    color: var(--gris-secundario);
+
+    font-size: 1.15rem;
+    line-height: 1.7;
+
+    max-width: 560px;
+
+    margin-bottom: 30px;
+}
+
+
+/* juego destacado */
+
+.featured-card {
+    overflow: hidden;
+
+    background: var(--negro-card);
+
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 35px rgba(16, 185, 129, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+}
+
+.featured-image-container {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+}
+
+.featured-image-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.5s ease;
+}
+
+.featured-card:hover img {
+    transform: scale(1.03);
+}
+
+.featured-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 11, 10, 0.95),
+            rgba(8, 11, 10, 0.05) 65%
+        );
+}
+
+.featured-label {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 7px 12px;
+
+    border-radius: 50px;
+
+    background: rgba(8, 11, 10, 0.75);
+    color: var(--esmeralda-brillante);
+
+    border: 1px solid var(--borde);
+
+    backdrop-filter: blur(8px);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.featured-content {
+    padding: 25px;
+}
+
+.featured-content h2 {
+    font-size: 1.8rem;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.featured-content p {
+    color: var(--gris-secundario);
+    min-height: 48px;
+}
+
+.featured-price {
+    font-size: 1.4rem;
+    color: var(--esmeralda-brillante);
+}
+
+
+/* buscador */
+
+.search-section {
+    padding: 45px 0;
+
+    background: var(--negro-secundario);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.search-box {
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 185, 129, 0.08),
+            rgba(16, 185, 129, 0.02)
+        );
+
+    border: 1px solid var(--borde);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.search-title {
+    font-size: 1.3rem;
+}
+
+.search-description {
+    color: var(--gris-secundario);
+}
+
+.search-input {
+    background: #080b0a;
+    color: white;
+
+    border-color: rgba(255, 255, 255, 0.15);
+
+    border-radius: 9px 0 0 9px;
+}
+
+.search-input:focus {
+    background: #080b0a;
+    color: white;
+
+    border-color: var(--esmeralda);
+
+    box-shadow:
+        0 0 0 0.2rem rgba(16, 185, 129, 0.12);
+}
+
+.search-input::placeholder {
+    color: #6b7280;
+}
+
+
+/* catalogo */
+
+.catalogo-section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 25px;
+}
+
+.section-kicker {
+    color: var(--esmeralda);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-weight: 750;
+    margin-top: 5px;
+}
+
+
+/* filtros */
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-filtro {
+    color: var(--gris-texto);
+
+    background: var(--negro-card);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 8px;
+
+    transition: all 0.2s ease;
+}
+
+.btn-filtro:hover,
+.btn-filtro.active {
+    color: white;
+
+    background: rgba(16, 185, 129, 0.12);
+
+    border-color: var(--esmeralda);
+
+    box-shadow:
+        0 0 15px rgba(16, 185, 129, 0.1);
+}
+
+
+/* productos en tarjetas */
+
+.product-card {
+    height: 100%;
+    overflow: hidden;
+
+    background: var(--negro-card);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--esmeralda);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(16, 185, 129, 0.08);
+}
+
+.product-image-container {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background: #050706;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.04);
+}
+
+.product-category {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    padding: 5px 9px;
+
+    background: rgba(8, 11, 10, 0.85);
+
+    color: var(--esmeralda-brillante);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 50px;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    backdrop-filter: blur(6px);
+}
+
+.product-body {
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px;
+
+    min-height: 235px;
+}
+
+.product-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+.product-description {
+    color: var(--gris-secundario);
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+
+    flex-grow: 1;
+}
+
+.product-price {
+    color: var(--esmeralda-brillante);
+
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.btn-product {
+    border-radius: 8px;
+}
+
+
+/* carrito */
+
+.modal-gamestore {
+    background: var(--negro-card);
+
+    color: white;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.65),
+        0 0 35px rgba(16, 185, 129, 0.08);
+}
+
+.modal-gamestore .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-gamestore .modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.carrito-item:last-child {
+    border-bottom: none;
+}
+
+.carrito-imagen {
+    width: 65px;
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+
+    border: 1px solid var(--borde);
+}
+
+.carrito-info {
+    flex-grow: 1;
+}
+
+.carrito-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.carrito-precio {
+    color: var(--esmeralda-brillante);
+    font-weight: 700;
+}
+
+.carrito-cantidad {
+    color: var(--gris-secundario);
+    font-size: 0.85rem;
+}
+
+.btn-eliminar {
+    border-radius: 7px;
+}
+
+.total-carrito {
+    font-size: 1.1rem;
+}
+
+.total-carrito strong {
+    color: var(--esmeralda-brillante);
+}
+
+
+/* mensajes */
+
+.estado-gamestore {
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(16, 185, 129, 0.05);
+
+    border: 1px solid var(--borde);
+
+    color: var(--gris-texto);
+}
+
+.estado-error {
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(220, 38, 38, 0.08);
+
+    border: 1px solid rgba(220, 38, 38, 0.3);
+
+    color: #fca5a5;
+}
+
+
+/* footer */
+
+.footer-gamestore {
+    padding: 55px 0 25px;
+
+    background: #050706;
+
+    border-top: 1px solid var(--borde);
+
+    color: var(--gris-secundario);
+}
+
+.footer-brand {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.footer-brand span {
+    color: var(--esmeralda);
+}
+
+.footer-gamestore h4 {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gris-texto);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--esmeralda);
+
+    border-color: var(--esmeralda);
+
+    transform: translateY(-2px);
+}
+
+
+/* responsive */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .featured-image-container {
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        padding: 55px 0;
+    }
+
+    .hero-title {
+        font-size: 2.7rem;
+    }
+
+    .featured-image-container {
+        height: 330px;
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .product-image-container {
+        height: 360px;
+    }
+
+    .carrito-item {
+        align-items: flex-start;
+    }
+
+}
+/* ajuste de texto para celulares */
+
+@media (max-width: 576px) {
+
+    /* Título principal */
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    /* Texto introductorio */
+    .lead {
+        font-size: 1rem;
+    }
+
+    /* Títulos de las tarjetas */
+    .game-card .card-title {
+        font-size: 1rem;
+    }
+
+    /* Descripción de los juegos */
+    .game-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    /* Precio */
+    .game-card .price {
+        font-size: 1.1rem;
+    }
+
+    /* Botones de las tarjetas */
+    .game-card .btn {
+        font-size: 0.9rem;
+    }
+
+    /* Juego destacado */
+    #featured-content h2 {
+        font-size: 1.5rem;
+    }
+
+    #featured-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Buscador */
+    #searchInput {
+        font-size: 0.95rem;
+    }
+
+    /* Modal del carrito */
+    .modal-title {
+        font-size: 1.2rem;
+    }
+
+    .modal-body {
+        font-size: 0.9rem;
+    }
+}

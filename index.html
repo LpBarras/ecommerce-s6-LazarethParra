@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="GameStore - Tienda de videojuegos">
+
+    <title>GameStore | Videojuegos</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+
+    <!-- Iconos Bootstrap -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- barra -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-gamestore sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2"
+                href="#inicio">
+
+                <span class="brand-icon">
+                    <i class="bi bi-controller"></i>
+                </span>
+
+                <span>GAME<span class="text-esmeralda">STORE</span></span>
+
+            </a>
+
+            <!-- Botón menu móvil -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menú">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link categoria-link"
+                            href="#catalogo"
+                            data-categoria="PlayStation">
+                            PlayStation
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link categoria-link"
+                            href="#catalogo"
+                            data-categoria="Xbox">
+                            Xbox
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link categoria-link"
+                            href="#catalogo"
+                            data-categoria="Nintendo">
+                            Nintendo
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Botón carrito -->
+                <button
+                    id="btn-carrito"
+                    class="btn btn-carrito position-relative"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalCarrito">
+
+                    <i class="bi bi-cart3"></i>
+                    Carrito
+
+                    <span
+                        id="contador-carrito"
+                        class="badge rounded-pill contador-carrito">
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- portada -->
+    <header id="inicio" class="hero-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- Texto -->
+                <div class="col-lg-6">
+
+                    <span class="badge badge-esmeralda mb-3">
+                        <i class="bi bi-controller me-1"></i>
+                        Especialmente para ti
+                    </span>
+
+                    <h1 class="hero-title">
+                        Vive la experiencia
+                        <span class="text-esmeralda">gaming</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Encuentra tus videojuegos favoritos para
+                        PlayStation, Xbox y Nintendo.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <a href="#catalogo"
+                            class="btn btn-esmeralda btn-lg">
+                            <i class="bi bi-grid-3x3-gap me-2"></i>
+                            Ver catálogo
+                        </a>
+
+                        <button
+                            id="btn-ver-destacado"
+                            class="btn btn-outline-light btn-lg">
+
+                            <i class="bi bi-stars me-2"></i>
+                            Juego destacado
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Juego destacado -->
+                <div class="col-lg-6">
+
+                    <div id="juego-destacado"
+                        class="featured-card">
+
+                        <div class="featured-image-container">
+
+                            <img
+                                id="destacado-imagen"
+                                src=""
+                                alt="Juego destacado">
+
+                            <div class="featured-overlay"></div>
+
+                            <span class="featured-label">
+                                <i class="bi bi-stars me-1"></i>
+                                DESTACADO
+                            </span>
+
+                        </div>
+
+                        <div class="featured-content">
+
+                            <span
+                                id="destacado-categoria"
+                                class="small text-esmeralda fw-semibold">
+                            </span>
+
+                            <h2 id="destacado-nombre">
+                                Cargando...
+                            </h2>
+
+                            <p id="destacado-descripcion">
+                                Cargando juego destacado...
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <strong
+                                    id="destacado-precio"
+                                    class="featured-price">
+                                </strong>
+
+                                <button
+                                    id="btn-agregar-destacado"
+                                    class="btn btn-esmeralda">
+
+                                    <i class="bi bi-cart-plus me-1"></i>
+                                    Agregar
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- buscador-->
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <div class="row align-items-center g-3">
+
+                    <div class="col-lg-5">
+
+                        <h2 class="search-title mb-1">
+                            <i class="bi bi-search text-esmeralda me-2"></i>
+                            Busca tu próximo juego
+                        </h2>
+
+                        <p class="search-description mb-0">
+                            Busca por nombre, consola o palabras clave.
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-7">
+
+                        <form id="form-busqueda"
+                            class="search-form"
+                            novalidate>
+
+                            <div class="input-group">
+
+                                <label
+                                    for="input-busqueda"
+                                    class="visually-hidden">
+                                    Buscar 
+                                </label>
+
+                                <input
+                                    type="search"
+                                    id="input-busqueda"
+                                    class="form-control search-input"
+                                    placeholder="Ej: Mario, fútbol, carreras..."
+                                    autocomplete="off">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-esmeralda">
+
+                                    <i class="bi bi-search me-1"></i>
+                                    Buscar
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="resultado-busqueda"
+                    class="mt-3"
+                    aria-live="polite">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- catalogo -->
+    <main id="catalogo" class="catalogo-section">
+
+        <div class="container">
+
+            <!-- Encabezado -->
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        CATÁLOGO
+                    </span>
+
+                    <h2 id="titulo-catalogo">
+                        Todos los videojuegos
+                    </h2>
+
+                </div>
+
+                <div id="cantidad-productos"
+                    class="text-secondary small">
+                    Cargando productos...
+                </div>
+
+            </div>
+
+
+            <!-- Filtro de categorías -->
+            <div class="category-filters mb-4">
+
+                <button
+                    type="button"
+                    class="btn btn-filtro categoria-btn active"
+                    data-categoria="Todos">
+
+                    Todos
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-filtro categoria-btn"
+                    data-categoria="PlayStation">
+
+                    <i class="bi bi-playstation me-1"></i>
+                    PlayStation
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-filtro categoria-btn"
+                    data-categoria="Xbox">
+
+                    <i class="bi bi-xbox me-1"></i>
+                    Xbox
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-filtro categoria-btn"
+                    data-categoria="Nintendo">
+
+                    <i class="bi bi-nintendo-switch me-1"></i>
+                    Nintendo
+                </button>
+
+            </div>
+
+
+            <!-- Estado de carga -->
+            <div
+                id="estado-productos"
+                class="mb-4"
+                aria-live="polite">
+            </div>
+
+
+            <!-- Productos -->
+            <div
+                id="grid-productos"
+                class="row g-4">
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- carrito modal-->
+    <div
+        class="modal fade"
+        id="modalCarrito"
+        tabindex="-1"
+        aria-labelledby="tituloModalCarrito"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content modal-gamestore">
+
+                <div class="modal-header">
+
+                    <h2
+                        class="modal-title fs-5"
+                        id="tituloModalCarrito">
+
+                        <i class="bi bi-cart3 text-esmeralda me-2"></i>
+                        Mi carrito
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <!-- Carrito dinámico -->
+                    <div id="contenido-carrito">
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer d-flex justify-content-between">
+
+                    <button
+                        id="btn-vaciar-carrito"
+                        type="button"
+                        class="btn btn-outline-danger">
+
+                        <i class="bi bi-trash3 me-1"></i>
+                        Vaciar carrito
+                    </button>
+
+                    <div class="d-flex align-items-center gap-3">
+
+                        <div class="total-carrito">
+                            Total:
+                            <strong id="total-carrito">
+                                $0
+                            </strong>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="btn btn-esmeralda"
+                            data-bs-dismiss="modal">
+
+                            Seguir comprando
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer-->
+    <footer class="footer-gamestore">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h3 class="footer-brand">
+                        GAME<span>STORE</span>
+                    </h3>
+
+                    <p class="mb-0">
+                        Encuentra
+                        grandes aventuras.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h4>Plataformas</h4>
+
+                    <ul class="list-unstyled footer-links">
+
+                        <li>PlayStation</li>
+                        <li>Xbox</li>
+                        <li>Nintendo</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h4>Contacto</h4>
+
+                    <p class="mb-2">
+                        <i class="bi bi-envelope me-2"></i>
+                        contacto@gamestore.cl
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="#"
+                            aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#"
+                            aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center small">
+                © 2026 GameStore — S6 Desarrollo FrontEnd
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

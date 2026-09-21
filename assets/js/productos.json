@@ -1,0 +1,244 @@
+[
+    {
+        "id": 1,
+        "nombre": "EA SPORTS FC 27",
+        "precio": 62900,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/fc27.jpg",
+        "descripcion": "Simulador de fútbol con equipos, jugadores y competiciones actualizadas."
+    },
+    {
+        "id": 2,
+        "nombre": "God of War Ragnarök",
+        "precio": 59990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/god-of-war-ragnarok.jpg",
+        "descripcion": "Aventura de acción protagonizada por Kratos y Atreus en la mitología nórdica."
+    },
+    {
+        "id": 3,
+        "nombre": "Marvel's Spider-Man 2",
+        "precio": 64990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/spider-man-2.jpg",
+        "descripcion": "Juego de acción y aventura donde Peter Parker y Miles Morales protegen Nueva York."
+    },
+    {
+        "id": 4,
+        "nombre": "The Last of Us Part II Remastered",
+        "precio": 49990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/last-of-us-2.jpg",
+        "descripcion": "Aventura narrativa de supervivencia con una historia centrada en Ellie y Abby."
+    },
+    {
+        "id": 5,
+        "nombre": "Horizon Forbidden West",
+        "precio": 59990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/horizon-forbidden-west.jpg",
+        "descripcion": "Aloy explora un mundo abierto dominado por máquinas y descubre nuevos territorios."
+    },
+    {
+        "id": 6,
+        "nombre": "Gran Turismo 7",
+        "precio": 59990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/gran-turismo-7.jpg",
+        "descripcion": "Simulador de conducción con numerosos vehículos, circuitos y modos de competición."
+    },
+    {
+        "id": 7,
+        "nombre": "ASTRO BOT",
+        "precio": 59990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/astro-bot.jpg",
+        "descripcion": "Aventura de plataformas protagonizada por Astro a través de mundos llenos de desafíos."
+    },
+    {
+        "id": 8,
+        "nombre": "Demon's Souls",
+        "precio": 69990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/demon-souls.jpg",
+        "descripcion": "RPG de acción y fantasía con combates exigentes y exploración de un mundo oscuro."
+    },
+    {
+        "id": 9,
+        "nombre": "Returnal",
+        "precio": 49990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/returnal.jpg",
+        "descripcion": "Shooter de acción y ciencia ficción basado en ciclos de exploración y supervivencia."
+    },
+    {
+        "id": 10,
+        "nombre": "Helldivers 2",
+        "precio": 39990,
+        "categoria": "PlayStation",
+        "imagen": "assets/img/helldivers-2.jpg",
+        "descripcion": "Shooter cooperativo donde los jugadores combaten juntos contra amenazas alienígenas."
+    },
+
+    {
+        "id": 11,
+        "nombre": "Forza Horizon 5",
+        "precio": 43900,
+        "categoria": "Xbox",
+        "imagen": "assets/img/forza-horizon-5.jpg",
+        "descripcion": "Juego de carreras de mundo abierto ambientado en diferentes regiones de México."
+    },
+    {
+        "id": 12,
+        "nombre": "Forza Horizon 6",
+        "precio": 59990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/forza-horizon-6.jpg",
+        "descripcion": "Nueva entrega de la serie de carreras de mundo abierto con nuevos vehículos y escenarios."
+    },
+    {
+        "id": 13,
+        "nombre": "Halo Infinite",
+        "precio": 49990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/halo-infinite.jpg",
+        "descripcion": "Shooter de ciencia ficción protagonizado por el Jefe Maestro."
+    },
+    {
+        "id": 14,
+        "nombre": "Gears 5",
+        "precio": 39990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/gears-5.jpg",
+        "descripcion": "Shooter en tercera persona con campaña narrativa y combates contra enemigos alienígenas."
+    },
+    {
+        "id": 15,
+        "nombre": "Sea of Thieves",
+        "precio": 29990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/sea-of-thieves.jpg",
+        "descripcion": "Aventura pirata multijugador basada en exploración, navegación y búsqueda de tesoros."
+    },
+    {
+        "id": 16,
+        "nombre": "Starfield",
+        "precio": 59990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/starfield.jpg",
+        "descripcion": "RPG de ciencia ficción que permite explorar planetas y sistemas solares."
+    },
+    {
+        "id": 17,
+        "nombre": "Microsoft Flight Simulator",
+        "precio": 69990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/microsoft-flight-simulator.jpg",
+        "descripcion": "Simulador de vuelo con recreaciones detalladas de lugares y aeropuertos del mundo."
+    },
+    {
+        "id": 18,
+        "nombre": "Psychonauts 2",
+        "precio": 29990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/psychonauts-2.jpg",
+        "descripcion": "Aventura de plataformas con poderes psíquicos y una historia de humor y exploración."
+    },
+    {
+        "id": 19,
+        "nombre": "Hi-Fi RUSH",
+        "precio": 29990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/hi-fi-rush.jpg",
+        "descripcion": "Juego de acción donde los combates y movimientos se sincronizan con la música."
+    },
+    {
+        "id": 20,
+        "nombre": "Grounded 2",
+        "precio": 29990,
+        "categoria": "Xbox",
+        "imagen": "assets/img/grounded.jpg",
+        "descripcion": "Juego de supervivencia y construcción donde los jugadores han sido reducidos al tamaño de insectos."
+    },
+
+    {
+        "id": 21,
+        "nombre": "The Legend of Zelda: Tears of the Kingdom",
+        "precio": 69990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/zelda-tears.jpg",
+        "descripcion": "Aventura de mundo abierto donde Link explora Hyrule y las islas del cielo."
+    },
+    {
+        "id": 22,
+        "nombre": "Mario Kart 8 Deluxe",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/mario-kart-8.jpg",
+        "descripcion": "Juego de carreras protagonizado por personajes del universo Nintendo."
+    },
+    {
+        "id": 23,
+        "nombre": "Super Mario Bros. Wonder",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/super-mario-bros-wonder.jpg",
+        "descripcion": "Aventura de plataformas 2D con nuevos poderes y transformaciones de Mario."
+    },
+    {
+        "id": 24,
+        "nombre": "Super Mario Odyssey",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/super-mario-odyssey.jpg",
+        "descripcion": "Aventura de plataformas 3D en la que Mario viaja por distintos mundos."
+    },
+    {
+        "id": 25,
+        "nombre": "Pokémon Scarlet",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/pokemon-scarlet.jpg",
+        "descripcion": "RPG de Pokémon con exploración de mundo abierto y nuevas criaturas."
+    },
+    {
+        "id": 26,
+        "nombre": "Animal Crossing: New Horizons",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/animal-crossing.jpg",
+        "descripcion": "Simulador de vida donde puedes construir y personalizar tu propia isla."
+    },
+    {
+        "id": 27,
+        "nombre": "Metroid Dread",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/metroid-dread.jpg",
+        "descripcion": "Aventura de acción y exploración protagonizada por Samus Aran."
+    },
+    {
+        "id": 28,
+        "nombre": "Pikmin 4",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/Pikmin-4.jpg",
+        "descripcion": "Aventura estratégica donde se utilizan pequeñas criaturas para superar obstáculos."
+    },
+    {
+        "id": 29,
+        "nombre": "Splatoon 3",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/Splatoon-3.jpg",
+        "descripcion": "Shooter competitivo donde los equipos utilizan tinta para conquistar el escenario."
+    },
+    {
+        "id": 30,
+        "nombre": "Mario Party Superstars",
+        "precio": 59990,
+        "categoria": "Nintendo",
+        "imagen": "assets/img/Mario-Party-Superstars.jpg",
+        "descripcion": "Colección de minijuegos competitivos para disfrutar con amigos y familia."
+    }
+]

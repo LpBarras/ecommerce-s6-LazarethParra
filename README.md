@@ -1,12 +1,12 @@
 #GameStore React
 
-Aplicacion web de compra simulada de videojuegos, se actualiza desde javascript para uso de React, vite, npm. Se mantiene usop de bootstrap.
+Aplicacion web de compra simulada de videojuegos, se actualiza desde javascript para uso de React, vite, npm. Se mantiene uso de bootstrap.
 Se agrega ademas el uso de usestate, useeffect, renderizado condicional, componentes reutilizables y props. 
 
 
 
 El catalogo no esta escrito dentro de componentes. Al iniciar la aplicacion se hace una peticion con fetch para obtener el archivo json con los datos de los juegos, que son almacenados en el estado de productos. 
-Desde alli se se contruye el resto de la interfaz de forma dinamica.
+Desde alli se contruye el resto de la interfaz de forma dinamica.
 
 
 Funciones de la aplicacion:

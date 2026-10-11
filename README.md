@@ -1,5 +1,13 @@
 #GameStore React
 
+Intrucciones de implementAcion:
+-Abrir una terminal dentro de la carpeta del proyecto.
+-Ejecutar npm install para instalar las dependencias.
+-Ejecutar npm run dev para iniciar el servidor local.
+-Abrir en el navegador la dirección que aparece en la terminal.
+-npm run build para la version de produccion.
+-Para actualizar GitHub Pages se utiliza npm run deploy.
+
 Aplicacion web de compra simulada de videojuegos, se actualiza desde javascript para uso de React, vite, npm. Se mantiene uso de bootstrap.
 Se agrega ademas el uso de usestate, useeffect, renderizado condicional, componentes reutilizables y props. 
 
@@ -57,12 +65,20 @@ selección del juego destacado;
 renderizado del catálogo;
 obtención de datos para el carrito.
 
-const [carrito, setCarrito] = useState([]) se cambia el estado inicial vacio mediante distintas acciones que permiten;
+const [carrito, setCarrito] = useState([]) 
+*Se actualiza el carrito, ahora utiliza un estado inicial que recupera los productos
+guardados en localStorage. Si no hay, comienza vacio.
+
+Mediante useEffect se guarda automáticamente el contenido del
+carrito en localStorage cada vez que cambia su estado.
+
+Las acciones del usuario permiten:
 aumenta el contador de la navbar;
 modifica el contenido del modal;
 recalcula el total;
 muestra la cantidad por producto;
 cambia el texto de botones a enel carrito.
+Conservar el carrito al recargar la página.
 
 const [categoriaActual, setCategoriaActual] = useState('Todos') inicialmente esta en la categoria todos por default, puede cambiar a cada una de las consolas a traves de botones en pantalla
 
@@ -81,4 +97,21 @@ permite realizar el renderizado condicional de feedback
 const [cantidadResultados, setCantidadResultados] = useState(null), sirve para mostrar el resultado de busquedas, se utiliza null para diferenciar el estado con 0 resultados encrontrados y el estado con un numero de resultados encontrados.
 ```
 
+Como actualizacion para evaluacion EFT se agregan las siguientes funcionalidades por recomendacion y por pauta:
 
+*Formulario de contacto:
+
+-Se crea el componente ContactForm.jsx.
+-Se agrega una sección de contacto con campos de nombre, correo electrónico y mensaje.
+-Se utiliza useState para controlar los datos ingresados.
+-Se validan los campos vacíos y el formato del correo electrónico.
+-Se muestran mensajes de error o confirmación según los datos ingresados.
+-Se agrega el enlace Contacto en la barra de navegación.
+-El formulario simula el envío.
+
+*Persistencia del carrito:
+
+-Se incorpora localStorage para guardar los productos agregados al carrito.
+-Al recargar la página se recuperan los productos y sus cantidades.
+-Se utiliza useEffect para actualizar los datos guardados cada vez que cambia el carrito.
+-Al eliminar productos o vaciar el carrito también se actualiza el almacenamiento.

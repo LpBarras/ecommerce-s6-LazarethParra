@@ -6,6 +6,8 @@ import CategoryFilters from './components/CategoryFilters'
 import ProductList from './components/ProductList'
 import Cart from './components/Cart'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
+
 
 function App() {
 
@@ -416,6 +418,8 @@ function App() {
                     </div>
                 </div>
             </div>
+            {/* formulario de contacto */}
+            <ContactForm />
 
             <Footer />
         </>

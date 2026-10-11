@@ -847,3 +847,48 @@ section {
 .btn-en-carrito:disabled {
     opacity: 1;
 }
+
+
+/* formulario de contacto */
+
+.contacto-section {
+    background: #0b100e;
+    border-top: 1px solid var(--borde);
+}
+
+.contacto-section h2 {
+    color: white;
+    font-weight: 700;
+}
+
+.contacto-section p {
+    color: var(--gris-secundario);
+}
+
+.contacto-section .form-label {
+    color: white;
+}
+
+.contacto-section .form-control {
+    background: #151b18;
+    border: 1px solid var(--borde);
+    color: white;
+    border-radius: 8px;
+}
+
+.contacto-section .form-control:focus {
+    background: #151b18;
+    color: white;
+    border-color: var(--esmeralda);
+    box-shadow: none;
+}
+
+.contacto-section .form-control:focus-visible {
+    outline: 2px solid var(--esmeralda);
+    outline-offset: 2px;
+}
+
+.contacto-section .alert {
+    border-radius: 8px;
+}
+

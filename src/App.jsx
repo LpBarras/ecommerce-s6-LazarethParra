@@ -13,13 +13,28 @@ function App() {
 
     /* estado */
     const [productos, setProductos] = useState([])
-    const [carrito, setCarrito] = useState([])
+    const [carrito, setCarrito] = useState(() => {
+    /* recuperar carrito guardado */
+    try {
+        const carritoGuardado = localStorage.getItem('carritoGameStore')
+
+        return carritoGuardado ? JSON.parse(carritoGuardado) : []
+    } catch (error) {
+        console.error('Error al recuperar el carrito:', error)
+        return []
+    }
+})
+
     const [categoriaActual, setCategoriaActual] = useState('Todos')
     const [terminoBusqueda, setTerminoBusqueda] = useState('')
     const [terminoAplicado, setTerminoAplicado] = useState('')
     const [juegoDestacado, setJuegoDestacado] = useState(null)
     const [estadoCarga, setEstadoCarga] = useState('loading')
     const [cantidadResultados, setCantidadResultados] = useState(null)
+    /* guardar carrito en localStorage */
+    useEffect(() => {
+            localStorage.setItem('carritoGameStore', JSON.stringify(carrito))
+        }, [carrito])
 
     /* carga productos desde json con fetch */
     useEffect(() => {
